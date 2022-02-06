@@ -5,7 +5,7 @@ services:
     build: ./python-app/
     depends_on:
       - db
-    command: sh -c "/wait && python3 add_data_in_db.py"
+    command: sh -c "/wait && python3 main.py"
     environment:
       - WAIT_HOSTS=db:5432
       - WAIT_HOSTS_TIMEOUT=3
