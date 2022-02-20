@@ -4,4 +4,3 @@ CREATE TABLE words (
     ascii_word VARCHAR(100) NOT NULL,
     definition VARCHAR
 )
-
