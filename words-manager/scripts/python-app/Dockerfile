@@ -7,9 +7,14 @@ RUN chmod +x /wait
 
 # install psycopg2 library with PIP
 COPY requirements.txt /
-COPY add_data_in_db.py /
+
+COPY insert_data.py /
+COPY sanitize_data.py /
+COPY main.py /
+
+COPY data/def_spa.csv data/
 
 RUN pip3 install -r requirements.txt
 
-CMD ["python3", "add_data_in_db.py"]
+CMD ["python3", "main.py"]
 
